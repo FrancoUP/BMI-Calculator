@@ -1,0 +1,1207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.box-calculator {
+  width: 1276px;
+  height: 737px;
+  margin-left: 24px;
+}
+
+.app-description {
+  width: 978px;
+  height: 100%;
+  border-radius: 0px 0px 35px 35px;
+  background: var(--gradient-1, linear-gradient(315deg, #D6E6FE 0%, rgba(214, 252, 254, 0.00) 100%));
+
+  position: relative;
+}
+
+.box-icon-logo {
+  position: absolute;
+  left: 140px;
+  top: 75px;
+}
+
+.icon-logo {
+  width: 64px;
+}
+
+.main-box-description {
+  width: 564px;
+
+  position: absolute;
+  left: 140px;
+  top: 265px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 35px;
+}
+
+.box-title {
+  width: 100%;
+  font-size: 64px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -3.2px;
+}
+
+.box-description {
+  width: 465px;
+  font-size: 16px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  line-height: 150%;
+  color: var(--dark-electric-blue, #5E6E85);
+}
+
+.main-box-calculator {
+  width: 564px;
+  height: auto;
+  border-radius: 16px;
+  border-radius: 16px;
+  background-color: #FFF;
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+
+  position: absolute;
+  left: 736px;
+  top: 166px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.title-details {
+  padding-top: 32px;
+  padding-left: 32px;
+  grid-column: 1 / 3;
+  font-size: 24px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+
+.box-metric {
+  width: 100%;
+  padding-left: 32px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 150%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.box-imperial {
+  width: 100%;
+  padding-right: 32px;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 150%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.metric-round,
+.imperial-round {
+  height: 31px;
+  width: 31px;
+  border-radius: 50%;
+  border-color: rgb(149, 149, 149);
+  border-style: solid;
+  border-width: 1px;
+
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+
+  cursor: pointer;
+  margin-right: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.metric-round {
+  background-color: rgba(52, 95, 246, 0.19);
+}
+
+.imperial,
+.metric {
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.inside {
+  width: 18px;
+  height: 18px;
+  border-style: none;
+  border-radius: 50%;
+  background-color: Blue;
+}
+
+.inside-imperial {
+  opacity: 0;
+}
+
+.inside-metric {
+  opacity: 1;
+}
+
+/* //////////////////////////////////// */
+
+.box-height-metric,
+.box-weight-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.box-height-metric {
+  padding-left: 32px;
+}
+
+/* ////////////////////////////////////// */
+
+
+
+.box-measure-imperial,
+.box-imper {
+  
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.box-measure-imperial {
+  padding-left: 32px;
+}
+
+.box-imper {
+  padding-right: 32px;
+}
+
+.hidden-measure {
+  color: white;
+  font-size: 20px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  line-height: 150%;
+  margin-bottom: 3px;
+}
+
+.imperial-1 {
+  display: none;
+}
+
+.imperial-2 {
+  display: none;
+}
+
+.imper-1 {
+  display: none;
+}
+
+.imper-2 {
+  display: none;
+}
+
+
+
+
+
+
+/* ////////////////////////////////////// */
+
+.weight,
+.height {
+  margin-bottom: 3px;
+  color: #5E6E85;
+  font-size: 20px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  line-height: 150%;
+}
+
+.box-input-unit {
+  width: 238px;
+  border-radius: 12px;
+  border: 1px solid var(--blue, #345FF6);
+  background: var(--pure-white, #FFF);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 10px;
+}
+
+.input {
+  width: 131px;
+  font-size: 24px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  border-style: none;
+  margin-left: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+input.input::-webkit-inner-spin-button,
+input.input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.unit {
+  display: flex;
+  align-items: center;
+  color: var(--blue, #345FF6);
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 600;
+  letter-spacing: -1.2px;  
+  margin-right: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.result {
+  grid-column: 1 / 3;
+  width: 500px;
+  padding: 32px;
+  border-radius: 16px 999px 999px 16px;
+  background: linear-gradient(90deg, #345FF6 0%, #587DFF 100%);
+  margin-left: 32px;
+  margin-bottom: 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.result-left {
+  margin-right: 77px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.bmi {
+  color: var(--pure-white, #FFF);
+  font-size: 16px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 150%;
+  min-width: 105px;
+}
+
+.bmi-value {
+  color: var(--pure-white, #FFF);
+  font-size: 64px;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -3.2px;
+}
+
+.result-right {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+
+  color: var(--pure-white, #FFF);
+  font-size: 14px;
+  font-family: Inter;
+  line-height: 150%;
+}
+
+
+
+
+
+.main-top {
+  width: 1160px;
+  height: 533px;
+  margin-left: 164px;
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  position: relative;
+}
+
+.curve-right {
+  position: absolute;
+  top: -30px;
+  left: 920px;
+}
+
+.main-top-box-image {
+  width: 468px;
+  height: 533px;
+}
+
+.image-man {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding-top: 50px;
+}
+
+.main-top-box-description {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: end;
+}
+
+.title-bmi {
+  color: var(--gunmetal, #253347);
+  font-size: 48px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -2.4px;
+  margin-bottom: 20px;
+}
+
+.description-bmi {
+  color: var(--dark-electric-blue, #5E6E85);
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 150%;
+  margin-bottom: 50px;
+}
+
+.box-healthy-actions {
+  width: 1140px;
+  height: auto;
+  margin-left: 164px;
+  margin-top: 150px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+
+}
+
+.box-action {
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.health-logo,
+.health-title,
+.health-description {
+  width: 50px;
+  height: 50px;
+  align-self: center;
+}
+
+.title-actions {
+  color: var(--gunmetal, #253347);
+  font-size: 24px;
+  font-family: Inter;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.description-actions {
+  color: var(--dark-electric-blue, #5E6E85);
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 150%;
+}
+
+
+
+
+
+
+
+.box-containers {
+  /* background-color: yellow; */
+  width: 1140px;
+  height: 700px;
+  margin-left: 164px;
+  margin-top: 180px;
+  margin-bottom: 200px;
+
+  position: relative;
+}
+
+.curve-left {
+  position: absolute;
+  top: 280px;
+  left: 200px;
+}
+
+.box-bmi-limitation {
+  width: 564px;
+  height: 184px;
+  border-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title-bmi-limitation {
+  color: var(--gunmetal, #253347);
+  font-size: 48px;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -2.4px;
+
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
+.text-bmi-limitation {
+  color: var(--dark-electric-blue, #5E6E85);
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 150%;
+
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+
+
+.box-container {
+  width: 365px;
+  height: 232px;
+  border-radius: 16px;
+  background: var(--pure-white, #FFF);
+  box-shadow: 16px 32px 56px 0px rgba(143, 174, 207, 0.25);
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.box-title-container {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.logo-container {
+  width: 32px;
+  height: 32px;
+}
+
+
+.title-container {
+  color: var(--gunmetal, #253347);
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 600;
+  letter-spacing: -1px;
+
+  display: flex;
+  align-items: center;
+}
+
+.text-container {
+  color: var(--dark-electric-blue, #5E6E85);
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 150%;
+}
+
+
+.container-race {
+  position:absolute;
+  top: 540px;
+  left: 240px;
+}
+
+.container-pregnancy {
+  position:absolute;
+  top: 540px;
+  left: 650px;
+}
+
+.container-muscle {
+  position:absolute;
+  top: 270px;
+  left: 780px;
+}
+
+.container-age {
+  position:absolute;
+  top: 270px;
+  left: 375px;
+}
+
+.container-gender {
+  position:absolute;
+  top: 0px;
+  left: 690px;
+}
+
+
+
+
+
+/* ////////////////////////// TABLET ///////////////////////////////////// */
+
+@media (max-width: 950px) {
+
+  .box-calculator {
+    width: 100vw;
+    margin: 0;
+  }
+  
+  .app-description {
+    width: 100%;
+    height: 640px;
+  
+    position: static;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 0;
+  }
+  
+  .box-icon-logo {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-logo {
+    width: 40px;
+    margin-top: 7vw;
+    margin-bottom: 6vw; 
+  }
+  
+  .main-box-description {
+    width: 90%;
+  
+    position: static;
+    margin-bottom: 10vw; 
+    gap: 0;
+  }
+  
+  .box-title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 5vw;
+  }
+  
+  .box-description {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .main-box-calculator {
+    width: 90%;
+    height: auto;
+  
+    position: static;
+  }
+  
+  .box-metric {
+    width: 100%;
+  }
+  
+  .box-imperial {
+    width: 100%;
+  } 
+
+  .box-weight-metric {
+    padding-right: 32px;
+  }
+  
+  .box-input-unit {
+    width: 90%;
+  }
+  
+  .input {
+    width: 80%;
+  }
+  
+  .result {
+    width: 90%;
+  }
+  
+  .result-left {
+    margin-right: 77px;
+  }
+
+  .bmi {
+    width: 120px;
+  }
+  
+  .bmi-value {
+    font-size: 48px;
+  }
+
+
+  .main-top {
+    width: 100vw;
+    height: auto;
+    margin-left: 0;
+    margin-top: 27vw;
+    /* Se imperial margin-top: 40vw; */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-top-box-image {
+    grid-column: 1 / 3;
+    width: 360px;
+    height: 411px;
+    place-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-man {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding-top: 0;
+  }
+
+  .main-top-box-description {
+    grid-column: 1 / 3;
+    height: auto;
+    place-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20vw;
+    margin-left: 20vw;
+  }
+
+  .title-bmi {
+    margin-bottom: 20px;
+  }
+
+  .description-bmi {
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  .box-healthy-actions {
+    width: 85%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vw;
+  
+    gap: 0;
+  
+  }
+  
+  .box-action {
+  
+    display: grid;
+    grid-template-rows: 50px 50px 50px;
+    grid-template-columns: 0.1fr 0.9fr;
+
+    grid-column: 1 / 4;
+  }
+  
+  .health-logo,
+  .health-title,
+  .health-description {
+    width: 50px;
+    height: 50px;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+  }
+  
+  .title-actions {
+
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    margin-left: 2vw;
+  }
+  
+  .description-actions {
+
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    margin-left: 2vw;
+  }
+
+
+  .box-containers {
+    width: 100vw;
+    height: auto;
+    margin-left: 0;
+    margin-top: 50px;
+    margin-bottom: 200px;
+  
+    position: static;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  
+  
+  
+  .box-bmi-limitation {
+    width: 80%;
+    height: auto;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  
+    position: static;
+
+    grid-column: 1 / 3;
+    place-self: center;
+  }
+  
+  .title-bmi-limitation {
+    display: flex;
+    text-align: center;
+     align-items: center;
+    justify-content: center;
+  }
+  
+  .text-bmi-limitation {
+    text-align: center;
+  }
+  
+  
+  .box-container {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  .container-race {
+    width: calc(50% - 24px);
+    position:static;
+    grid-column: 1 / 3;
+    place-self: center;
+  }
+  
+  .container-pregnancy {
+    position:static;
+  }
+  
+  .container-muscle {
+    position:static;
+  }
+  
+  .container-age {
+    position:static;
+  }
+  
+  .container-gender {
+    position:static;
+  }
+
+}
+
+
+
+
+
+
+/* ////////////////////// MOBILE /////////////////////////// */
+
+
+@media (max-width: 550px) {
+
+  .box-calculator {
+    width: 100vw;
+    margin: 0;
+  }
+  
+  .app-description {
+    width: 100%;
+    height: 640px;
+  
+    position: static;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 0;
+  }
+  
+  .box-icon-logo {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-logo {
+    width: 40px;
+    margin-top: 7vw;
+    margin-bottom: 6vw; 
+  }
+  
+  .main-box-description {
+    width: 90%;
+  
+    position: static;
+    margin-bottom: 10vw; 
+    gap: 0;
+  }
+  
+  .box-title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 5vw;
+  }
+  
+  .box-description {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .main-box-calculator {
+    width: 90%;
+    height: auto;
+  
+    position: static;
+    gap: 0;
+  }
+
+  .title-details {
+    margin-bottom: 7vw;
+  }
+  
+  .box-metric {
+    width: 100%;
+    margin-bottom: 7vw;
+    
+    
+  }
+  
+  .box-imperial {
+    width: 100%;
+    margin-bottom: 7vw;
+  } 
+
+  /* //////////////////////////////////// */
+
+  .box-imper {
+    margin-bottom: 7vw;
+  }
+
+  .box-measure-imperial{
+    margin-bottom: 7vw;
+  }
+
+  /* //////////////////////////////////// */
+
+
+  .box-height-metric,
+  .box-weight-metric {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: stacrt;
+    justify-content: center;
+  }
+
+  .box-height-metric {
+    margin-bottom: 5vw;
+  }
+
+  .box-weight-metric {
+    margin-bottom: 7vw;
+    padding-right: 0;
+    padding-left: 32px;
+  }
+
+  .box-weight {
+    padding-left: 32px;
+    padding-right: 0;
+  }
+
+  .box-input-unit {
+    width: 90%;
+  }
+  
+  .input {
+    width: 80%;
+  }
+
+  .result {
+    width: calc(90% - 30px);
+    padding-left: 32px;
+    margin-left: 32px;
+    border-radius: 16px 16px 16px 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 0;
+  }
+
+  .result-left {
+    margin-right: 0;
+    margin-bottom: 7vw;
+  }
+
+  .bmi {
+    margin-bottom: 3vw;
+  }
+
+  .bmi-value {
+    font-size: 48px;
+  }
+
+
+  .main-top {
+    width: 100vw;
+    height: auto;
+    margin-left: 0;
+    margin-top: 450px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-top-box-image {
+    grid-column: 1 / 3;
+    width: 100vw;
+    height: auto;
+    place-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-man {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding-top: 0;
+  }
+
+  .main-top-box-description {
+    grid-column: 1 / 3;
+    height: auto;
+    place-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-right: 6vw;
+    margin-left: 6vw;
+    margin-top: 10vw;
+  }
+
+  .title-bmi {
+    margin-bottom: 20px;
+  }
+
+  .description-bmi {
+    margin-bottom: 0px;
+    text-align: start;
+  }
+
+
+
+
+  .box-healthy-actions {
+    width: 88vw;
+    margin-left: 6vw;
+    margin-right: 0;
+    margin-top: 20vw;
+  
+    gap: 0;
+  
+  }
+  
+  .box-action {
+  
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 0.1fr 0.9fr;
+
+    grid-column: 1 / 4;
+  }
+  
+  .health-logo,
+  .health-title,
+  .health-description {
+    width: 32px;
+    height: 32px;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+  }
+  
+  .title-actions {
+
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    margin-left: 2vw;
+  }
+  
+  .description-actions {
+
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    margin-left: 2vw;
+  }
+
+
+  .box-containers {
+    width: 100vw;
+    height: auto;
+    margin-left: 0;
+    margin-top: 50px;
+    margin-bottom: 200px;
+  
+    position: static;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  
+  .box-bmi-limitation {
+    width: 90%;
+    height: auto;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    /* margin-bottom: 7vw; */
+  
+    position: static;
+
+    grid-column: 1 / 3;
+    place-self: center;
+  }
+  
+  .title-bmi-limitation {
+    font-size: 32px;
+  
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .text-bmi-limitation {
+    text-align: center;
+  }
+  
+  .box-container {
+    width: 90%;
+    height: auto;
+    place-self: center;
+  }
+
+  .box-title-container {
+    margin-bottom: 10px;
+  }
+
+  .title-container {
+    margin-left: 10px;
+  }
+
+  .container-race {
+    position:static;
+    grid-column: 1 / 3;
+  }
+  
+  .container-pregnancy {
+    position:static;
+    grid-column: 1 / 3;
+  }
+  
+  .container-muscle {
+    position:static;
+    grid-column: 1 / 3;
+  }
+  
+  .container-age {
+    position:static;
+    grid-column: 1 / 3;
+  }
+  
+  .container-gender {
+    position:static;
+    grid-column: 1 / 3;
+  } 
+}

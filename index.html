@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | Body Mass Index Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    
+  </head>
+  <body>
+
+    <header class="box-calculator">
+
+      <div class="app-description">
+
+        <div class="box-icon-logo">
+          <object class="icon-logo" title="logo" type="image/svg+xml" data="assets/images/logo.svg"></object>
+        </div>
+        
+        <div class="main-box-description">
+          <div class="box-title">
+            <p>Body Mass<br> Index Calculator</p>
+          </div>
+  
+          <div class="box-description">
+            <p>Better understand your weight in relation to your height using our body mass index (BM) calculator. While BMI is not the sole determinant of a healthy weight, it offers a valuable starting point to evaluate your overall health and well-being.</p>
+          </div>
+        </div>
+
+        <div class="main-box-calculator"">
+
+          <div class="title-details">Enter your details below</div>
+
+          
+          <div class="box-metric">
+            <div class="metric-round">
+              <div class="inside inside-metric"></div>
+            </div>
+            <span class="metric">Metric</span>
+          </div>
+
+          <div class="box-imperial">
+            <div class="imperial-round">
+              <div class="inside inside-imperial"></div>
+            </div>
+            <span class="imperial">Imperial</span>
+          </div>
+
+          <!-- ///////////////////////////////////////////// -->
+
+          <div class="box-height-metric">
+            <span class="height">Height</span>
+            <div class="box-input-unit">
+              <input type="number" class="input input-cm">
+              <div class="unit">cm</div>
+            </div>
+          </div>
+
+          <div class="box-weight-metric">
+            <span class="weight">Weight</span>
+            <div class="box-input-unit">
+              <input type="number" class="input input-kg">
+              <div class="unit">Kg</div>
+            </div>
+          </div>
+
+          <!-- ///////////////////////////////// -->
+
+          <div class="box-measure-imperial imperial-1">
+            <span class="height">Height</span>
+            <div class="box-input-unit ft">
+              <input type="number" class="input input-ft">
+              <div class="unit">ft</div>
+            </div>
+          </div>
+
+          <div class="box-imper imper-1">
+            <span class="hidden-measure">a</span>
+            <div class="box-input-unit in">
+              <input type="number" class="input input-in">
+              <div class="unit">in</div>
+            </div>
+          </div>
+
+          <div class="box-measure-imperial imperial-2">
+            <span class="weight">Weight</span>
+            <div class="box-input-unit st">
+              <input type="number" class="input input-st">
+              <div class="unit">st</div>
+            </div>
+          </div>
+
+          <div class="box-imper imper-2">
+            <span class="hidden-measure">a</span>
+            <div class="box-input-unit lbs">
+              <input type="number" class="input input-lbs">
+              <div class="unit">lbs</div>
+            </div>
+          </div>
+
+          <!-- ///////////////////////////////////////////////// -->
+
+          <div class="result"">
+            <div class="result-left">
+              <div class="bmi">Your BMI is...</div>
+              <div class="bmi-value"><span class="value">0</span></div>
+            </div>
+            <div class="result-right">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </header>
+
+    <main class="main-top">
+      <object class="curve-right" title="curve-right" type="image/svg+xml" data="assets/images/pattern-curved-line-left.svg"></object>
+      <div class="main-top-box-image">
+        <img class="image-man" src="assets/images/image-man-eating.webp"></img>
+      </div>
+      <div  class="main-top-box-description">
+        <div class="title-bmi">What your BMI result means</div>
+        <div class="description-bmi">A BMI range of 18.5 to 24.9 is considered a 'healthy weight.' Maintaining a healthy weight may lower your chances of experiencing health issues later on, such as obesity and type 2 diabetes. Aim for a nutritious diet with reduced fat and sugar content, incorporating ample fruits and vegetables. Additionally, strive for regular physical activity, ideally about 30 minutes daily for five days a week.</div>
+      </div>
+    </main>
+
+    <div class="box-healthy-actions">
+
+      <div class="box-action">
+        <object class="health-logo" title="logo-eating" type="image/svg+xml" data="assets/images/icon-eating.svg"></object>
+        <div class="title-actions">Healthy eating</div>
+        <div class="description-actions">Healthy eating promotes weight control, disease prevention, better digestion, immunity, mental clarity, and mood.</div>
+      </div>
+
+      <div class="box-action">
+        <object class="health-title" title="logo-exercise" type="image/svg+xml" data="assets/images/icon-exercise.svg"></object>
+        <div class="title-actions">Regular exercise</div>
+        <div class="description-actions">Exercise improves fitness, aids weight control, elevates mood, and reduces disease risk, fostering wellness and longevity.</div>
+      </div>
+
+      <div class="box-action">
+        <object class="health-description" title="logo-sleep" type="image/svg+xml" data="assets/images/icon-sleep.svg"></object>
+        <div class="title-actions">Adequate sleep</div>
+        <div class="description-actions">Sleep enhances mental clarity, emotional stability, and physical wellness, promoting overall restoration and rejuvenation.</div>
+      </div>
+    </div>
+
+
+
+    <div class="box-containers">
+
+      <object class="curve-left" title="curve-left" type="image/svg+xml" data="assets/images/pattern-curved-line-right.svg"></object>
+
+      <div class="box-bmi-limitation">
+        <div class="title-bmi-limitation">Limitations of BMI</div>
+        <div class="text-bmi-limitation">Although BMI is often a practical indicator of healthy weight, it is not suited for every person. Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may not be beneficial to use.</div>
+      </div>
+
+      <div class="box-container container-gender">
+        <div class="box-title-container">
+          <object class="logo-container" title="logo-gender" type="image/svg+xml" data="assets/images/icon-gender.svg"></object>
+          <div class="title-container">Gender</div>
+        </div>
+        <div class="text-container">The development and body fat composition of girls and boys vary with age. Consequently, a child's age and gender are considered when evaluating their BMI.</div>
+      </div>
+
+      <div class="box-container container-age"> 
+        <div class="box-title-container">
+          <object class="logo-container" title="logo-age" type="image/svg+xml" data="assets/images/icon-age.svg"></object>
+          <div class="title-container">Age</div>
+        </div>
+        <div class="text-container">In aging individuals, increased body fat and muscle loss may cause BMI to underestimate body fat content.</div>
+      </div>
+
+      <div class="box-container container-muscle">
+        <div class="box-title-container">
+          <object class="logo-container" title="logo-muscle" type="image/svg+xml" data="assets/images/icon-muscle.svg"></object>
+          <div class="title-container">Muscle</div>
+        </div>
+        <div class="text-container">BMI may misclassify muscular individuals as overweight or obese, as it doesn't differentiate muscle from fat.</div>
+      </div>
+
+      <div class="box-container container-pregnancy">
+        <div class="box-title-container">
+          <object class="logo-container" title="logo-pregnancy" type="image/svg+xml" data="assets/images/icon-pregnancy.svg"></object>
+          <div class="title-container">Pregnancy</div>
+        </div>
+        <div class="text-container">Expectant mothers experience weight gain due to their growing baby. Maintaining a healthy pre-pregnancy BMI is advisable to minimise health risks for both mother and child.</div>
+      </div>
+
+      <div class="box-container container-race">
+        <div class="box-title-container">
+          <object class="logo-container" title="logo-race" type="image/svg+xml" data="assets/images/icon-race.svg"></object>
+          <div class="title-container">Race</div>
+        </div>
+        <div class="text-container">Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than others. To learn more, it is advised to discuss this with your GP or practice nurse.</div>
+      </div>
+
+    </div>
+
+  </body>
+</html>
