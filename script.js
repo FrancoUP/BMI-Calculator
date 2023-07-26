@@ -1,4 +1,5 @@
-const metric = document.querySelector(".metric-round");
+
+ metric = document.querySelector(".metric-round");
 const imperial = document.querySelector(".imperial-round");
 const selectorMetric = document.querySelector(".inside-metric");
 const selectorImperial = document.querySelector(".inside-imperial");
@@ -258,6 +259,14 @@ elementsFT_ST.forEach(el => {
 
 
 
+  document.body.addEventListener('touchmove', (e) => { 
+  
+     // Questo blocca il refresh della pagina 
+     document.body.style.overscrollBehavior = "none"; 
+     // Questo mantiene lo scroll nonostante il refresh sia deattivato 
+     document.body.style.overflow = "auto"; 
+  
+   }, { passive: false });
 
 
 // function insertHTMLAfterChild(newHTML, parentEl, targetChildEl) {
@@ -280,3 +289,4 @@ elementsFT_ST.forEach(el => {
 //    // Insert the document fragment after the target child element
 //    parentEl.insertBefore(fragment, targetChildEl);
 //  }
+
